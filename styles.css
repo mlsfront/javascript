@@ -104,8 +104,13 @@ nav header h1 {
         padding: 0 14px;
         position: relative;
         margin-left: 0px !important;
-        margin-top: 1744px;
-      
+        margin-top: 1744px;      
+    }
+}
+
+@media (max-width: 370px) {
+    main {
+        margin-top: 1790px;      
     }
 }
 
