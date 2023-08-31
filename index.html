@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Estudo JS</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <header>
+            <h1>JavaScript</h1>
+        </header>
+
+        <ul>
+            <li><a href="#nav_comentario">comentario</a></li>
+            <li><a href="#nav_declarar_variaveis">declarar variaveis</a></li>
+            <li><a href="#nav_armazenar_valores">armazenar valores</a></li>
+            <li><a href="#nav_atribuir_valor_para_outra_var">atribuir valor para outra var</a></li>
+            <li><a href="#nav_inicializar_var">inicializar var</a></li>
+            <li><a href="#nav_declara_var_string">declara var string</a></li>
+            <li><a href="#nav_var_nao_inicializada">var nao inicializada</a></li>
+            <li><a href="#nav_sensibilidade_caractere">sensibilidade caractere</a></li>
+            <li><a href="#nav_variaveis_leitura_const">variaveis leitura const</a></li>
+            <li><a href="#nav_adicionar_dois_numeros">adicionar dois numeros</a></li>
+            <li><a href="#nav_subtrair_numero">subtrair numero</a></li>
+            <li><a href="#nav_multiplicar">multiplicar</a></li>
+            <li><a href="#nav_dividir">dividir</a></li>
+            <li><a href="#nav_incremento">incremento</a></li>
+            <li><a href="#nav_decremento">decremento</a></li>
+            <li><a href="#nav_decimais">decimais</a></li>
+            <li><a href="#nav_multiplicar_decimal">multiplicar decimal</a></li>
+            <li><a href="#nav_dividir_decimal">dividir decimal</a></li>
+            <li><a href="#nav_resto_divisao">resto divisão</a></li>
+            <li><a href="#nav_atribuir_modo_composto_adicao">atribuir modo composto adição</a></li>
+            <li><a href="#nav_atribuir_modo_composto_subtracao">atribuir modo composto subtração</a></li>
+            <li><a href="#nav_atribuir_modo_composto_multiplicacao">atribuir modo composto multiplição</a></li>
+            <li><a href="#nav_atribuir_modo_composto_divisao">atribuir modo composto divisão</a></li>
+            <li><a href="#nav_aspas_dentro_aspas">aspas dentro aspas</a></li>
+            <li><a href="#nav_string_aspas_simples">string aspas simples</a></li>
+            <li><a href="#nav_escapar_strings">escapar strings</a></li>
+            <li><a href="#nav_concatenar_com_operador_adicao">concatenar com operador adição</a></li>
+            <li><a href="#nav_concatenar_com_operador_adicao_igual">concatenar com operador adição igual</a></li>
+            <li><a href="#nav_criar_strings_com_variaveis">criar strings com variaveis</a></li>
+            <li><a href="#nav_adicionar_variaveis_para_strin">adicionar variaveis para string</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="comentario">
+            <header>
+                <h2 id="nav_comentario">comentario</h2>
+            </header>
+            
+            <h3>O que são e quais as formas de comentar um código?</h3>
+
+            <p>Comentários são linhas de código ou informações adicionais que podem descrever o que determinada parte do código vai fazer. O javascript também vai ignorar o comentário entendendo que não é um código.</p>
+
+            <p>Existem duas maneiras de fazer comentários em javascript</p>
+
+            <p>comentário de uma linha usando // que dirá ao javascript pra ignorar o que tiver na mesma linha após as duas barras.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            // Este é um comentário de uma linha
+            </pre>
+            </div>
+
+            <p>Comentário em várias linhas uando /* antes e */ depois do conteúdo</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            /* Este é um commentário
+            de multiplas
+            linhas */
+            </pre>
+            </div>
+
+            <p>Crie o habito de comentar partes do código quando você estiver desenvolvendo uma aplicação, pois isso facilitará a manutenção futura, e qualquer pessoa que tiver acesso saberá o que o código irá fazer.</p>
+        </section>
+
+        <section id="declarar_variaveis">
+            <header>
+                <h2 id="nav_declarar_variaveis">declarar variaveis</h2>
+            </header>
+            
+            <h3>O que é uma variável?</h3>
+            
+            <p>É um tipo de dado. Em javascript por exemplo existem 8 tipos:</p>
+            
+            <h3>Tipos de dados</h3>
+
+            <ul>
+                <li>undefined</li>
+                <li>null</li>
+                <li>boolean</li>
+                <li>string</li>
+                <li>symbol</li>
+                <li>bigint</li>
+                <li>number</li>
+                <li>object</li>
+            </ul>
+            
+            <p>Um computador distingue números que estiverem fora das aspas como números, mas se estiver dentros de "" será considerado como texto.</p>
+            
+            <p>Portanto para fazer calculos em javascript não esquecer de usar números fora de aspas</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            let numero = 1 + 2;
+            </pre>
+            </div>
+            
+            <p class="resultado">O resultado será 3</p>
+            
+            <p>Mas se estiver dentro de aspas</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+                let numero = "1 + 2";
+            </pre>
+            </div>           
+            
+            <p class="resultado">O resultado apresentado será 1 + 2</p>
+            
+        </section>
+
+        <section id="armazenar_valores">
+            <header>
+                <h2 id="nav_armazenar_valores">armazenar valores</h2>
+            </header>
+            <h3>Como armazenar uma variável?</h3>
+            
+            <p>Uma variável em javascript pode ser armazenada usando o operador de atribuição (=).</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            minhaVariavel = 5;
+            </pre>
+            </div>
+            
+            <p>Tudo que tiver depois do operador (=) será executado primeiro para depois ser atribuido à variável.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            var minhaVariavel;
+            minhaVariavel = 5;
+            </pre>
+            </div>
+            
+            <p>A variável <span class="verde">minhaVariavel</span> foi criada, depois o valor <span class="verde">5</span> foi atribuido, e se <span class="verde">minhaVariavel</span> for chamada no programa irá aparecer como <span class="verde">5</span>.</p>
+            
+            
+        </section>
+
+        <section id="atribuir_valor_para_outra_var">
+            <header>
+                <h2 id="nav_atribuir_valor_para_outra_var">atribuir valor para outra var</h2>
+            </header>
+
+        </section>
+
+        <section id="inicializar_var">
+            <header>
+                <h2 id="nav_inicializar_var">inicializar var</h2>
+            </header>
+
+        </section>
+
+        <section id="declara_var_string">
+            <header>
+                <h2 id="nav_declara_var_string">declara var string</h2>
+            </header>
+
+        </section>
+
+        <section id="var_nao_inicializada">
+            <header>
+                <h2 id="nav_var_nao_inicializada">var nao inicializada</h2>
+            </header>
+
+        </section>
+
+        <section id="sensibilidade_caractere">
+            <header>
+                <h2 id="nav_sensibilidade_caractere">sensibilidade caractere</h2>
+            </header>
+
+        </section>
+
+        <section id="variaveis_leitura_const">
+            <header>
+                <h2 id="nav_variaveis_leitura_const">variaveis leitura const</h2>
+            </header>
+
+        </section>
+
+        <section id="adicionar_dois_numeros">
+            <header>
+                <h2 id="nav_adicionar_dois_numeros">adicionar dois numeros</h2>
+            </header>
+
+        </section>
+
+        <section id="subtrair_numero">
+            <header>
+                <h2 id="nav_subtrair_numero">subtrair numero</h2>
+            </header>
+
+        </section>
+
+        <section id="multiplicar">
+            <header>
+                <h2 id="nav_multiplicar">multiplicar</h2>
+            </header>
+
+        </section>
+
+        <section id="dividir">
+            <header>
+                <h2 id="nav_dividir">dividir</h2>
+            </header>
+
+        </section>
+
+        <section id="incremento">
+            <header>
+                <h2 id="nav_incremento">incremento</h2>
+            </header>
+
+        </section> 
+
+        <section id="decremento">
+            <header>
+                <h2 id="nav_decremento">decremento</h2>
+            </header>
+
+        </section>
+
+        <section id="decimais">
+            <header>
+                <h2 id="nav_decimais">decimais</h2>
+            </header>
+
+        </section>
+
+        <section id="multiplicar_decimal">
+            <header>
+                <h2 id="nav_multiplicar_decimal">multiplicar decimal</h2>
+            </header>
+
+        </section>
+
+        <section id="dividir_decimal">
+            <header>
+                <h2 id="nav_dividir_decimal">dividir decimal</h2>
+            </header>
+
+        </section>
+
+        <section id="resto_divisao">
+            <header>
+                <h2 id="nav_resto_divisao">resto divisão</h2>
+            </header>
+
+        </section>
+
+        <section id="atribuir_modo_composto_adicao">
+            <header>
+                <h2 id="nav_atribuir_modo_composto_adicao">atribuir modo composto adição</h2>
+            </header>
+
+        </section>
+
+        <section id="atribuir_modo_composto_subtracao">
+            <header>
+                <h2 id="nav_atribuir_modo_composto_subtracao">atribuir modo composto subtração</h2>
+            </header>
+
+        </section>
+
+        <section id="atribuir_modo_composto_multiplicacao">
+            <header>
+                <h2 id="nav_atribuir_modo_composto_multiplicacao">atribuir modo composto multiplição</h2>
+            </header>
+
+        </section>
+
+        <section id="atribuir_modo_composto_divisao">
+            <header>
+                <h2 id="nav_atribuir_modo_composto_divisao">atribuir modo composto divisão</h2>
+            </header>
+
+        </section>
+
+        <section id="aspas_dentro_aspas">
+            <header>
+                <h2 id="nav_aspas_dentro_aspas">aspas dentro aspas</h2>
+            </header>
+
+        </section>
+
+        <section id="string_aspas_simples">
+            <header>
+                <h2 id="nav_string_aspas_simples">string aspas simples</h2>
+            </header>
+
+        </section>
+
+        <section id="escapar_strings">
+            <header>
+                <h2 id="nav_escapar_strings">escapar strings</h2>
+            </header>
+
+        </section>
+
+        <section id="concatenar_com_operador_adicao">
+            <header>
+                <h2 id="nav_concatenar_com_operador_adicao">concatenar com operador adição</h2>
+            </header>
+
+        </section>
+
+        <section id="concatenar_com_operador_adicao_igual">
+            <header>
+                <h2 id="nav_concatenar_com_operador_adicao_igual">concatenar com operador adição igual</h2>
+            </header>
+
+        </section>
+
+        <section id="criar_strings_com_variaveis">
+            <header>
+                <h2 id="nav_criar_strings_com_variaveis">criar strings com variaveis</h2>
+            </header>
+
+        </section>
+
+        <section id="adicionar_variaveis_para_strin">
+            <header>
+                <h2 id="nav_adicionar_variaveis_para_strin">adicionar variaveis para string</h2>
+            </header>
+
+        </section>
+    </main>
+</body>
+</html>
