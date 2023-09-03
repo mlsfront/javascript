@@ -121,7 +121,7 @@
             <div class="exemplo">
             <h4>exemplo:</h4>
             <pre>
-                let numero = "1 + 2";
+            let numero = "1 + 2";
             </pre>
             </div>           
             
@@ -164,6 +164,20 @@
                 <h2 id="nav_atribuir_valor_para_outra_var">atribuir valor para outra var</h2>
             </header>
 
+            <p>Se uma variável tiver recebido valor podemos usar ela como atributo para outra variável</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            var myVar;
+            myvar = 5;
+            var myNum;
+            myNum = myVar;
+            </pre>
+            </div>
+
+            <p>Primeiro foi criada uma variável <span class="verde">myVar</span> e atribuido um valor <span class="verde">5</span> Após criar a variável <span class="verde">myNum</span> que recebeu a variável <span class="verde">myVar</span> ela passou a valer <span class="verde">5</span> também, pois esse é o valor que tinha sido atribuido à <span class="verde">myVar</span>. Se por acaso trocarmos o valor de <span class="verde">myVar</span> automáticamente será alterado o valor de <span class="verde">myNum</span>.</p>
+
         </section>
 
         <section id="inicializar_var">
@@ -171,12 +185,44 @@
                 <h2 id="nav_inicializar_var">inicializar var</h2>
             </header>
 
+            <p>Para inicializar uma variável basta atribuir uma valor no momento em que ela está sendo declarada</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            var minhaVariavel = 10 + 2;
+            </pre>
+            </div>        
+            
+            <p>Se chamar <span class="verde">minhavariavel</span> irá mostrar o seguinte resultado:</p>
+            
+            <p>12</p>
+
         </section>
 
         <section id="declara_var_string">
             <header>
-                <h2 id="nav_declara_var_string">declara var string</h2>
+                <h2 id="nav_declara_var_string">declarar var string</h2>
             </header>
+
+            <p>Declarar uma variável do tipo <span class="verde">String</span> precisa atribuir algum valor entre aspas no momento em que ela está sendo declarada.</p>
+
+            <p class="resultado">O valor declarado como String pode ser tanto numérico como qualquer outro caractere</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            var minhaVariavel = "Minha variável";
+            ou
+            var minhaVariavel_2 = "10 + 2";
+            </pre>
+            </div>        
+            
+            <p>Se chamar as variáveis <span class="verde">minhavariavel</span> e <span class="verde">minhaVariavel_2</span>irá mostrar:</p>
+            
+            <p>Minha variável<br>10 + 2</p>
+
+            <p class="resultado">Percebeu que se atribuir números em uma variável do tipo String será apresentado o resultado como texto, e não será feito calculos?</p>
 
         </section>
 
