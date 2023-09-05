@@ -231,12 +231,38 @@
                 <h2 id="nav_var_nao_inicializada">var nao inicializada</h2>
             </header>
 
+            <p>Quando uma variável em javascript é declarada e nenhum valor é atribuido à ela, seu valor inicial será <span class="verde"> undefined</span> que em português significa indefinido.</p>      
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            let numero;
+            </pre>
+            </div>   
+            
+            <p>Se chamar essa variável <span class="verde">numero</span> no console ou pedir para imprimir na tela o resultado será:</p>
+            
+            <p class="resultado">undefined</p>
+
         </section>
 
         <section id="sensibilidade_caractere">
             <header>
                 <h2 id="nav_sensibilidade_caractere">sensibilidade caractere</h2>
             </header>
+
+            <p>Em javascript tanto os nomes de variáveis quanto de funções serão sensíveis a caracteres maiúsculos e minúsculos.</p>
+
+            <p>Uma variável "MINHAVARIAVEL" é diferente de "minhavariavel", isso significa que podemos usar a capitalização para diferenciamos variáveis, mas a melhor pratica é usar o <span class="verde">camelCase</span>, ou seja, inicial a variável com letra minúscula seguida de letra maiúscula caso tenha duas palavras</p>           
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            var duasPalavras;
+            var outroExemploSimples;
+            var maisUmExemploTetra
+            </pre>
+            </div>
 
         </section>
 
@@ -245,7 +271,36 @@
                 <h2 id="nav_variaveis_leitura_const">variaveis leitura const</h2>
             </header>
 
+                <h3>Declarar variáveis somente de leitura com a palavra-chave const</h3>
+
+                <p>Na versão ES6 além da palavra-chave <span class="verde">let</span> também podemos usar <span class="verde">const</span> que é outra palavra-chave.</p>
+                
+                <p>Uma vez atribuido um valor para variável <span class="verde">const</span>, esse valor não poderá ser alterado e servirá apenas para leitura.</p>
+
+                <p>Sendo assim, quando precisar atribuir um valor fixo que não haverá necessidade de reatribuição podemos usar a palavra-chave <span class="verde">const</span>, e caso acidentalmente tentarmos reatribuir outro valor o console exibirá um erro.</p>
+
+                <p>Uma boa prática é usar nomes em letras maiúsculas para valores imutáveis.</p>
+            
+                <div class="exemplo">
+                <h4>exemplo:</h4>
+                <pre>
+                const LINGUAGEM = "JavaScript";
+                </pre>
+                </div>           
+                
+
         </section>
+        <!--            
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            codigo
+            </pre>
+            </div>           
+            
+            <p class="resultado">resultado</p>
+        -->
 
         <section id="adicionar_dois_numeros">
             <header>
