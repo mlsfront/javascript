@@ -19,7 +19,6 @@
 }
 
 body {
-    /*background-color: var(--azul-claro);*/
     background-color: var(--amarelo-Khaki);
     color: var(--cinza-escuro);
 }
@@ -38,7 +37,6 @@ h3 {
 }
 
 nav {
-    /*background-color: var(--cinza-escuro);*/
     background-color: #000;
     position: fixed;
     top: 0px;
@@ -70,7 +68,6 @@ nav li:last-child {
 nav a {
     display: block;
     padding: 10px 10px;
-    /*color: var(--azul-claro);*/
     color: var(--amarelo-Khaki);
     text-decoration: none;
 }
@@ -79,12 +76,10 @@ nav header h1 {
     font-size: 3em;
     text-align: center;
     color: var(--amarelo-gold);
-    /*color: var(--azul-claro);*/
 }
 
 @media (max-width: 680px) {
     nav {
-        /*background-color: var(--cinza-escuro);*/
         background-color: #000;
         position: absolute;
         top: 0;
@@ -104,13 +99,15 @@ nav header h1 {
         padding: 0 14px;
         position: relative;
         margin-left: 0px !important;
-        margin-top: 1744px;      
+        margin-top: 1744px;
+      
     }
 }
 
 @media (max-width: 370px) {
     main {
-        margin-top: 1810px;      
+        margin-top: 1810px;
+      
     }
 }
 
@@ -140,7 +137,6 @@ section header h2 {
 }
 
 section div.exemplo {
-    /*background-color: var(--cinza-escuro);*/
     background-color: #000;
     border-radius: 7px;
     color: var(--azul-claro);
@@ -159,8 +155,9 @@ section p.resultado {
 }
 
 section div.exemplo > pre {
-    /*color: var(--amarelo);*/
     color: var(--amarelo-gold);
+    margin-left: -78px;
+    margin-top: 7px;
 }
 
 section .verde {
