@@ -567,71 +567,269 @@
             <header>
                 <h2 id="nav_atribuir_modo_composto_subtracao">atribuir modo composto subtração</h2>
             </header>
-        </section>
-        <!--      
+            
+            <h3>Atribuir de modo composto com subtração aumentada</h3>
+
+            <p>Como o operador +=, -= subtrai um número de uma variável.</p>  
             
             <div class="exemplo">
             <h4>exemplo:</h4>
             <pre>
-            codigo
+            myVar = myVar - 5;
             </pre>
             </div>
             
-            <p class="resultado">resultado</p>
-        -->
+            <p>vai subtrair 5 de myVar. Essa expressão pode ser reescrita assim:</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            myVar -= 5;
+            </pre>
+            </div>       
+        </section>
 
         <section id="atribuir_modo_composto_multiplicacao">
             <header>
                 <h2 id="nav_atribuir_modo_composto_multiplicacao">atribuir modo composto multiplição</h2>
             </header>
+
+            <h3>Atribuir de modo composto com multiplicação aumentada</h3>
+
+            <p>O operador *= multiplica uma variável por um número.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            myVar = myVar * 5;
+            </pre>
+            </div>       
+            
+            <p>multiplicará myVar por 5. Essa expressão pode ser reescrita assim:</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            myVar *= 5;
+            </pre>
+            </div>       
         </section>
 
         <section id="atribuir_modo_composto_divisao">
             <header>
                 <h2 id="nav_atribuir_modo_composto_divisao">atribuir modo composto divisão</h2>
             </header>
+
+            <h3>Atribuir de modo composto com divisão aumentada</h3>
+
+            <p>O operador /= divide uma variável por outro número.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            myVar = myVar / 5;
+            </pre>
+            </div>       
+            
+            <p>dividirá myVar por 5. Essa expressão pode ser reescrita assim:</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            myVar /= 5;
+            </pre>
+            </div>       
+
         </section>
 
         <section id="aspas_dentro_aspas">
             <header>
                 <h2 id="nav_aspas_dentro_aspas">aspas dentro aspas</h2>
             </header>
+
+            <h3>Escapar aspas literais em strings</h3>
+
+            <p>Quando você estiver definindo uma sequência de caracteres você deve iniciar e terminar com uma aspa simples ou dupla. O que acontece quando você precisa de uma aspa literal: " ou ' dentro de sua string?</p>
+            
+            <p>Em JavaScript, você pode escapar uma aspa para que não seja considerada como o fim de uma string ao colocar a barra invertida (\) na frente da aspa.</p>  
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const sampleStr = "Alan disse, \"Peter está aprendendo JavaScript\".";
+            </pre>
+            </div>
+            
+            <p>Isso sinaliza ao JavaScript que a aspa seguinte não é o fim de uma string, mas que deve aparecer dentro da string. Então, se você fosse imprimir isso no console, você obteria:</p>
+            
+            <p>resultado:</p>
+            <p class="resultado">Alan disse: "Peter está aprendendo JavaScript".</p>
         </section>
 
         <section id="string_aspas_simples">
             <header>
                 <h2 id="nav_string_aspas_simples">string aspas simples</h2>
             </header>
+
+            <h3>Cercar uma string com aspas simples</h3>
+
+            <p>Valores de string em JavaScript podem ser escritas com aspas simples ou duplas, desde que você comece e termine com o mesmo tipo de aspas. Diferente de outras linguagens de programação, aspas simples e duplas funcionam da mesma forma em JavaScript.</p>  
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const doubleQuoteStr = "Esta é uma string"; 
+            const singleQuoteStr = 'Esta também é uma string';
+            </pre>
+            </div>
+            
+            <p>O motivo pelo qual você pode querer usar um tipo de aspas no lugar da outra é se você vir a querer usar ambas em uma string. Isso pode acontecer se você quiser salvar uma conversa em uma string e ter a conversa entre aspas. Outro uso para isso seria salvar uma tag <a> com vários atributos em aspas, tudo dentro de uma string.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const conversation = 'Finn exclama para Jake: "Algébrico!"';
+            </pre>
+            </div>
+            
+            <p>Porém, isso se torna um problema se você precisar usar as aspas mais extremas dentro dela. Lembre-se, uma string tem o mesmo tipo de aspas no início e no final. Mas se você tem aquela mesma aspa em algum lugar no meio, a string vai terminar mais cedo e lançará um erro.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const goodStr = 'Jake pergunta a Finn, "Ei, let\'s go em uma aventura?"'; 
+            const badStr = 'Finn responde, "Vamos!"';
+            </pre>
+            </div>       
+            
+            <p>Aqui badStr lançará um erro.</p>
+            
+            <p>Na string goodStr acima, você pode usar ambas as aspas com segurança ao usar a barra invertida \ como um caractere de escapamento.
+            
+            <p>Observação: a barra invertida \ não deve ser confundida com a barra comum /. Elas não fazem a mesma coisa.</p>
         </section>
 
         <section id="escapar_strings">
             <header>
                 <h2 id="nav_escapar_strings">escapar strings</h2>
             </header>
+
+            <h3>Escapar sequências em strings</h3>
+
+            <p>Aspas não são os únicos caracteres que podem ser escapados dentro de uma string. As sequências de escape permitem que você use caracteres que você não poderia usar em uma string em outras situações.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            Código	Saída
+            \'	    aspas simples
+            \"	    aspas duplas
+            \\	    barra invertida
+            \n	    nova linha
+            \t	    tab
+            \r	    retorno de carro
+            \b	    retroceder
+            \f	    quebra de página
+            </pre>
+            </div>
+            
+            <p>Note que a própria barra invertida deve ser escapada para ser exibida como uma barra invertida.</p>
         </section>
 
         <section id="concatenar_com_operador_adicao">
             <header>
                 <h2 id="nav_concatenar_com_operador_adicao">concatenar com operador adição</h2>
             </header>
+
+            <h3>Concatenar strings com o operador mais</h3>
+
+            <p>Em JavaScript, quando o operador + é usado com um valor de String, ele é chamado de operador de concatenação. Você pode criar uma nova string a partir de outras strings ao concatenar elas juntos.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            'Meu nome é Alan,' + ' Eu concatenei.'
+            </pre>
+            </div>
+            
+            <p>Observação: cuidado com os espaços. A concatenação não adiciona espaços entre strings concatenadas, então você mesmo precisará adicioná-las.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const ourStr = "eu venho primeiro. " + "eu venho depois.";
+            </pre>
+            </div>   
+            
+            <p>resultado:</p>
+            <p class="resultado">eu venho primeiro eu venho depois.</p>
+            A string             
         </section>
 
         <section id="concatenar_com_operador_adicao_igual">
             <header>
                 <h2 id="nav_concatenar_com_operador_adicao_igual">concatenar com operador adição igual</h2>
             </header>
+
+            <h3>Concatenar strings com o operador mais igual</h3>
+
+            <p>Também podemos usar o operador += para concatenar uma string no final de uma variável string existente. Isso pode ser muito útil para quebrar uma longa string em várias linhas.</p>
+            
+            <p>Observação: cuidado com os espaços. A concatenação não adiciona espaços entre strings concatenadas, então você mesmo precisará adicioná-los.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            let ourStr = "eu venho primeiro. ";
+            ourStr += "eu venho em segundo.";
+            </pre>
+            </div>
+            
+            <p>resultado ourStr:</p>
+            <p class="resultado">eu venho primeiro. eu venho em segundo</p>  
         </section>
 
         <section id="criar_strings_com_variaveis">
             <header>
                 <h2 id="nav_criar_strings_com_variaveis">criar strings com variaveis</h2>
             </header>
+
+            <h3>Criar strings com variáveis</h3>
+
+            <p>Às vezes, você precisará criar uma string. Usando o operador de concatenação (+), você pode inserir uma ou mais variáveis em uma string que você está criando.</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const ourName = "freeCodeCamp";
+            const ourStr = "Olá, nosso nome é " + ourName + ", como vai você?";
+            </pre>
+            </div>
+            
+            <p>resultado ourStr:</p>
+            <p class="resultado">Olá, nosso nome é freeCodeCamp, como vai você?</p>       
         </section>
 
         <section id="adicionar_variaveis_para_strin">
             <header>
                 <h2 id="nav_adicionar_variaveis_para_strin">adicionar variaveis para string</h2>
             </header>
+
+            <h3>Adicionar variáveis para strings</h3>
+
+            <p>Assim como podemos construir uma string em várias linhas através das strings literais, nós também podemos adicionar as variáveis para a string usando o operador mais igual (+=).</p>
+            
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const anAdjetivo = "incrível!"; 
+            let ourStr = "freeCodeCamp is"; 
+            ourStr += anAdjetivo;
+            </pre>
+            </div>
+            
+            <p>resultado ourStr:</p>
+            <p class="resultado">freeCodeCamp é incrível!.</p>
         </section>
     </main>
 </body>
