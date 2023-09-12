@@ -43,6 +43,22 @@
             <li><a href="#nav_concatenar_com_operador_adicao_igual">concatenar com operador adição igual</a></li>
             <li><a href="#nav_criar_strings_com_variaveis">criar strings com variáveis</a></li>
             <li><a href="#nav_adicionar_variaveis_para_strin">adicionar variáveis para string</a></li>
+            <li><a href="#encontrar_o_tamanho_string">encontrar o tamanho string</a></li>
+            <li><a href="#encontrar_o_primeiro_caractere">encontrar o primeiro caractere</a></li>
+            <li><a href="#imutabilidade_das_strings">imutabilidade das strings</a></li>
+            <li><a href="#encontrar_o_enesimo_caractere">encontrar o enesimo caractere</a></li>
+            <li><a href="#encontrar_o_ultimo_caractere">encontrar o ultimo caractere</a></li>
+            <li><a href="#enesimo_caractere_antes_do_ultimo">enesimo caractere antes do ultimo</a></li>
+            <li><a href="#preencher_espacos_em_branco">preencher espacos em branco</a></li>
+            <li><a href="#armazenar_multiplos_valores">armazenar multiplos valores</a></li>
+            <li><a href="#aninhar_um_array_em_outro_array">aninhar um array em outro array</a></li>
+            <li><a href="#acessar_array_de_dados">acessar array de dados</a></li>
+            <li><a href="#modificar_dados_de_array">modificar dados de array</a></li>
+            <li><a href="#acessar_arrays_multidimensionais">acessar arrays multidimensionais</a></li>
+            <li><a href="#manipular_arrays_com_o_metodo_push">manipular arrays com o metodo push</a></li>
+            <li><a href="#manipular_arrays_com_o_metodo_pop">manipular arrays com o metodo pop</a></li>
+            <li><a href="#manipular_arrays_com_o_metodo_shift">manipular arrays com o metodo shift</a></li>
+            <li><a href="#manipular_arrays_com_o_metodo_unshift">manipular arrays com o metodo unshift</a></li>
         </ul>
     </nav>
 
@@ -830,7 +846,411 @@
             
             <p>resultado ourStr:</p>
             <p class="resultado">freeCodeCamp é incrível!.</p>
+        </section>		
+        
+        <section id="encontrar_o_tamanho_string">
+            <header>
+                <h2 id="encontrar_o_tamanho_string">encontrar o tamanho estring</h2>
+            </header>
+            <h3>Encontrar o tamanho de uma string</h3>
+
+            <p>Você pode encontrar o tamanho de um valor de String ao escrever .length após a variável de string ou literal de string.<p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            console.log("Alan Peter".length);
+            </pre>
+            </div>
+
+            <p>O valor 10 seria exibido no console. Observe que o caractere de espaço entre "Alan" e "Peter" também é contado.</p>          
+
+            <p>Por exemplo, se nós criássemos uma variável const firstName = "Ada", poderíamos descobrir qual o tamanho da string Ada usando a propriedade firstName.length.</p>
         </section>
+        
+		<section id="encontrar_o_primeiro_caractere">
+            <header>
+                <h2 id="encontrar_o_primeiro_caractere">encontrar o primeiro caractere</h2>
+            </header>
+
+            <h3>Usar notação de colchetes para encontrar o primeiro caractere em uma string</h3>
+
+            <p>Notação de colchetes é uma forma de pegar um caractere no índice especificado dentro de uma string.</p>
+
+            <p>A maioria das linguagens de programação modernas, como JavaScript, não começa contando do 1 como humanos fazem. Elas começam no 0. Isso é referido como indexação baseada em zero.</p>
+
+            <p>Por exemplo, o caractere no índice 0 da palavra Charles é C. Então, se const firstName = "Charles", você pode pegar o valor da primeira letra da string usando firstName[0].</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const firstName = "charles";
+            const firstLetter = firstName[0];
+            </pre>
+            </div>
+
+            <p>resultado: </p>
+            <p class="resultado">firstLetter teria o valor da string C.</p>
+        </section>
+        
+		<section id="imutabilidade_das_strings">
+            <header>
+                <h2 id="imutabilidade_das_strings">imutabilidade das strings</h2>
+            </header>
+
+            <h3>Entender a imutabilidade das strings</h3>
+
+            <p>Em JavaScript, valores String são imutáveis, o que significa que elas não podem ser alteradas após serem criadas.</p>
+                
+            <p>Por exemplo, o código a seguir produzirá um erro porque a letra B na cadeia de caracteres Bob não pode ser alterada para a letra J:</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            let myStr = "Bob";
+            myStr[0] = "J";
+            </pre>
+            </div>            
+                
+            <p>Observe que isso não significa que myStr não possa ser reatribuída. A única forma de alterar myStr seria atribuindo a ela um novo valor, deste modo:</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            let myStr = "Bob";
+            myStr = "Job";
+            </pre>
+            </div>  
+        </section>
+        
+		<section id="encontrar_o_enesimo_caractere">
+            <header>
+                <h2 id="encontrar_o_enesimo_caractere">encontrar o enesimo caractere</h2>
+            </header>
+
+            <h3>Usar notação de colchetes para encontrar o enésimo caractere em uma string</h3>
+
+            <p>Você também pode usar notação de colchetes para pegar caracteres em outras posições em uma string.
+
+            <p>Lembre-se de que computadores começam contando do 0. Então, o primeiro caractere é na verdade o caractere na posição 0.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const firstName = "Ada";
+            const secondLetterOfFirstName = firstName[1];
+            </pre>
+            </div>
+                
+            <p>secondLetterOfFirstName teria o valor da string d.<p>
+        </section>
+        
+		<section id="encontrar_o_ultimo_caractere">
+            <header>
+                <h2 id="encontrar_o_ultimo_caractere">encontrar o ultimo caractere</h2>
+            </header>
+            <h3>Usar notação de colchetes para encontrar o último caractere em uma string</h3>
+
+            <p>Para pegar a última letra de uma string, você pode subtrair um do tamanho da string.</p>
+                
+            <p>Por exemplo, se const firstName = "Ada", você pode pegar o valor da última letra da string ao usar firstName[firstName.length - 1].</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const firstName = "Ada";
+            const lastLetter = firstName[firstName.length - 1];
+            </pre>
+            </div>
+
+            <p>lastLetter teria o valor da string a.</p>
+
+            <div class="exemplo">
+                <label>Digite uma palavra. Click em enviar, e veja no resultado: <span class="amarelo">a última letra</span> que foi digitada.</label><br>
+                <input type="text" name="txt" id="txt"> 
+                <input type="button" value="Enviar" onclick="ultimaLetra()">
+                <input id="btnOk" type="reset" value="Apagar" onclick="apagar()">
+                <div id="res">Resultado</div>
+
+                <script>
+                    function ultimaLetra() {
+                        let txt = document.getElementById('txt')
+                        let res = document.getElementById('res')
+                        let t1 = String(txt.value)
+
+                        t1 = t1[t1.length -1]
+                        
+                        //function valorLetra(){
+                            if ((t1 == 'a') || (t1 == 'e') || (t1 == 'i') || (t1 == 'o') || (t1 == 'u')) {
+                                res.innerHTML = `A última letra é uma vogal:  <span class='amarelo'>${t1}</span>`    
+                            } else {
+                                res.innerHTML = "A última letra é uma consoante: <span class='amarelo'>" + t1 + "</sapan>"
+                            }
+                        //}                        
+
+                        /*if ((t1 != "")) {
+                            valorLetra()   
+                        } else {
+                            alert('Precisa digitar uma plavra ou uma letra!')
+                        window.location.reload(false);
+                        }*/
+                    }
+                        
+                    function apagar() {
+                        var btnOk = document.getElementById('btnok');
+                        btnOk = document.getElementById('txt').value="";
+                        window.location.reload(false);
+                    }
+                </script>
+            </div>
+        </section>
+        
+		<section id="enesimo_caractere_antes_do_ultimo">
+            <header>
+                <h2 id="enesimo_caractere_antes_do_ultimo">enesimo caractere antes do ultimo</h2>
+            </header>
+
+            <h3>Usar notação de colchetes para descobrir o enésimo caractere antes do último em uma string</h3>
+
+            <p>Você pode usar o mesmo princípio que nós acabamos de usar para recuperar o último caractere em uma string, para recuperar o enésimo caractere antes do último caractere.</p>
+                
+            <p>Por exemplo, você pode pegar o valor da antepenúltima letra da string const firstName = "Augusta" usando firstName[firstName.length - 3]</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const firstName = "Augusta";
+            const thirdToLastLetter = firstName[firstName.length - 3];
+            </pre>
+            </div>
+                
+            <p>thirdToLastLetter teria o valor da string s.</p>
+        </section>
+        
+		<section id="preencher_espacos_em_branco">
+            <header>
+                <h2 id="preencher_espacos_em_branco">preencher espacos em branco</h2>
+            </header>
+            
+            <h3>Preencher espaços em branco</h3>
+
+            <p>Você recebe frases com algumas palavras faltando, como substantivos, verbos, adjetivos e advérbios. Você então preencherá os pedaços faltantes com palavras de sua escolha de modo que a frase completa faça sentido.</p>
+                
+            <h3>Considere esta frase:</h3>
+                
+            <p>It was really ____, and we ____ ourselves ____.</p>
+                
+            <p>Essa frase possui três pedaços faltando - um <b>adjetivo</b>, um <b>verbo</b> e um <b>advérbio</b>, e nós podemos adicionar palavras de nossa escolha para completar. Em seguida, podemos atribuir a frase completa para uma variável como se segue:</p>
+                
+            <p>const sentence = "It was really " + "<b>hot</b>" + ", and we " + "<b>laughed</b>" + " ourselves " + "<b>silly</b>" + ".";</p>
+        </section>
+        
+		<section id="armazenar_multiplos_valores">
+            <header>
+                <h2 id="armazenar_multiplos_valores">armazenar multiplos valores</h2>
+            </header>
+            <h3>Armazenar múltiplos valores em uma variável usando arrays JavaScript</h3>
+
+            <p>Com as variáveis de array em JavaScript, podemos armazenar diversos dados em um único lugar.</p>
+
+            <p>Você começa uma declaração de um array com a abertura de um colchetes, terminando com o fechamento do colchetes e colocando vírgulas entre cada entrada, dessa forma:</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const sandwich = ["peanut butter", "jelly", "bread"];
+            </pre>
+            </div>
+        
+		<section id="aninhar_um_array_em_outro_array">
+            <header>
+                <h2 id="aninhar_um_array_em_outro_array">aninhar um array em outro array</h2>
+            </header>
+
+            <h3>Aninhar um array em outro array</h3>
+
+            <p>Você também pode aninhar arrays dentro de outros arrays, como abaixo:</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const teams = [["Bulls", 23], ["White Sox", 45]];
+            </pre>
+            </div>
+
+            <p>Isso é chamado um array multidimensional.<p>
+        </section>
+        
+		<section id="acessar_array_de_dados">
+            <header>
+                <h2 id="acessar_array_de_dados">acessar array de dados</h2>
+            </header>
+
+            <h3>Acessar array de dados com índices</h3>
+
+            <p>Podemos acessar os dados dentro de arrays usando indexes.</p>
+
+            <p>Os índices de um array são escritos na mesma notação com colchetes que as strings usam. Porém, em vez de especificar um caractere, eles estão especificando um item do array. Assim como ocorre com as strings, os arrays usam indexação de base zero, de forma que o primeiro elemento de um array possui índice 0.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const array = [50, 60, 70];
+            console.log(array[0]);
+            const data = array[1];
+            </pre>
+            </div>
+
+            <p>O console.log(array[0]) exibirá 50 e data terá o valor de 60.<p>
+        </section>
+        
+		<section id="modificar_dados_de_array">
+            <header>
+                <h2 id="modificar_dados_de_array">modificar dados de array</h2>
+            </header>
+
+            <h3>Modificar dados de array com índices</h3>
+
+            <p>Ao contrário das strings, as entradas de arrays são mutáveis e podem ser alteradas livremente, mesmo se o array foi declarado com const.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const ourArray = [50, 40, 30];
+            ourArray[0] = 15;
+            </pre>
+            </div>
+
+            <p>ourArray agora tem o valor [15, 40, 30].</p>
+
+            <p>Observação: não deve haver espaços entre o nome do array e os colchetes, como array [0]. Embora JavaScript seja capaz de processar isso corretamente, isso pode confundir outros programadores lendo seu código.</p>
+        </section>
+        
+		<section id="acessar_arrays_multidimensionais">
+            <header>
+                <h2 id="acessar_arrays_multidimensionais">acessar arrays multidimensionais</h2>
+            </header>
+
+            <h3>Acessar arrays multidimensionais com índices</h3>
+
+            <p>Uma maneira de pensar em um array multidimensional é como um array de arrays. Quando você usa colchetes para acessar seu array, o primeiro conjunto de colchetes se refere às entradas no array mais exterior (o primeiro nível), e cada par adicional de colchetes refere-se ao próximo nível de entradas interno.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const arr = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            [[10, 11, 12], 13, 14]
+            ];
+
+            const subarray = arr[3];
+            const nestedSubarray = arr[3][0];
+            const element = arr[3][0][1];
+            </pre>
+            </div>
+
+            <p>Neste exemplo, subarray tem o valor de [[10, 11, 12], 13, 14], nestedSubarray tem o valor de [10, 11, 12] e element tem o valor de 11.</p>
+
+            <p>Observação: não deve haver nenhum espaço entre o nome do array e os colchetes como array [0][0] e até mesmo array [0] [0] não é permitido. Embora JavaScript seja capaz de processar isso corretamente, isso pode confundir outros programadores lendo seu código.</p>
+        </section>
+        
+		<section id="manipular_arrays_com_o_metodo_push">
+            <header>
+                <h2 id="manipular_arrays_com_o_metodo_push">manipular arrays com o metodo push</h2>
+            </header>
+            
+            <h3>Manipular arrays com o método push</h3>
+
+            <p>Um modo fácil de adicionar dados no final de um array é através do método <span class="verde">push()</span>.</p>
+                
+            <p>O método <span class="verde">push()</span> recebe um ou mais argumentos e os insere no final do array, na ordem em que eles aparecerem. Ele retorna o novo comprimento do array.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const arr1 = [1, 2, 3];
+            arr1.push(4, 5);
+            
+            const arr2 = ["Stimpson", "J", "cat"];
+            arr2.push(["happy", "joy"]);
+            </pre>
+            </div>
+
+            <p>arr1 agora tem o valor de [1, 2, 3, 4, 5] e arr2 tem o valor de ["Stimpson", "J", "cat", ["happy", "joy"]].</p>
+        </section>
+        
+		<section id="manipular_arrays_com_o_metodo_pop">
+            <header>
+                <h2 id="manipular_arrays_com_o_metodo_pop">manipular arrays com o metodo pop</h2>
+            </header>
+            
+            <h3>Manipular arrays com o método pop</h3>
+
+            <p>Outra forma de alterar os dados em um array é com a função <span class="verde">.pop()</span>.</p>
+                
+            <p><span class="verde">.pop()</span> é usado para remover um valor do final do array. Nós podemos armazenar esse valor removido atribuindo-o a uma variável. Em outras palavras, <span class="verde">.pop()</span> remove o último elemento de um array e retorna aquele elemento.</p>
+            
+            <p>Qualquer tipo de entrada pode ser removida de um array - numbers, strings e até mesmo arrays aninhados.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const threeArr = [1, 4, 6];
+            const oneDown = threeArr.pop();
+            console.log(oneDown);
+            console.log(threeArr);
+            </pre>
+            </div>
+            
+            <p>O primeiro console.log exibirá o valor 6 e o segundo exibirá o valor [1, 4].</p>
+        </section>
+        
+		<section id="manipular_arrays_com_o_metodo_shift">
+            <header>
+                <h2 id="manipular_arrays_com_o_metodo_shift">manipular arrays com o metodo shift</h2>
+            </header>
+            
+            <h3>Manipular arrays com o método shift</h3>
+
+            <p><span class="verde">pop()</span> sempre remove o último elemento de um array. E se você quiser remover o primeiro?</p>
+            
+            <p>É aí que o <span class="verde">.shift()</span> vem a ser útil. Ele funciona da mesma forma que <span class="verde">.pop()</span>, exceto que ele remove o primeiro elemento ao invés do último.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const ourArray = ["Stimpson", "J", ["cat"]];
+            const removedFromOurArray = ourArray.shift();
+            </pre>
+            </div>
+            
+            <p>removedFromOurArray teria o valor da string Stimpson e ourArray teria o valor de ["J", ["cat"]].</p>
+        </section>
+        
+		<section id="manipular_arrays_com_o_metodo_unshift">
+            <header>
+                <h2 id="manipular_arrays_com_o_metodo_unshift">manipular arrays com o metodo unshift</h2>
+            </header>
+            
+            <h3>Manipular arrays com o método unshift</h3>
+
+            <p>Você pode não apenas usar <span class="verde">shift</span> para remover elementos do início de um array, como também pode usar <span class="verde">unshift</span> para adicionar elementos ao início de um array, ou seja, adicionar elementos na posição inicial do array.</p>
+            
+            <p><span class="verde">.unshift()</span> funciona exatamente como <span class="verde">.push()</span>, mas, ao invés de adicionar o elemento ao final do array, <span class="verde">unshift()</span> adiciona o elemento no início do array.</p>
+
+            <div class="exemplo">
+            <h4>exemplo:</h4>
+            <pre>
+            const ourArray = ["Stimpson", "J", "cat"];
+            ourArray.shift();
+            ourArray.unshift("Happy");
+            </pre>
+            </div>
+            
+            <p>Após o shift, ourArray teria o valor ["J","cat"]. Após o unshift, ourArray teria o valor ["Happy","J","cat"].</p>
+        </section>        
     </main>
 </body>
 </html>
